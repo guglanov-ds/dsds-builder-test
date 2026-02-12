@@ -496,6 +496,11 @@
     padding: 0 var(--ms);
   }
   
+  .fixed-bar .btn.is-active {
+    background: var(--bg-primary);
+    color: var(--btn-primary-color);
+  }
+  
   .theme-group {
     display: flex;
     align-items: center;
