@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="icon-house" viewBox="0 0 24 24">
+        <path d="M11.3564 3.54317C11.752 3.30567 12.248 3.30567 12.6436 3.54317L12.7266 3.59786L19.2266 8.24043H19.2275C19.5554 8.47507 19.7495 8.85368 19.75 9.25606V20.7502H13.25V14.7502H10.75V20.7502H4.25V9.25606L4.25879 9.10664C4.30071 8.76143 4.4865 8.44577 4.77344 8.24043L11.2734 3.59786L11.3564 3.54317ZM5.75 9.38496V19.2502H9.25V14.5002C9.25001 13.8099 9.80963 13.2502 10.5 13.2502H13.5C14.1904 13.2502 14.75 13.8099 14.75 14.5002V19.2502H18.25V9.38496L12 4.9211L5.75 9.38496Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="icon-360" viewBox="0 0 24 24">
+        <path d="M12 1.25C12.7374 1.25001 13.3375 1.77483 13.7686 2.32227C14.2298 2.90811 14.6538 3.715 15.0137 4.66211C15.2357 5.24651 15.4366 5.89649 15.6104 6.59863C15.0885 6.49621 14.5482 6.41424 13.9932 6.35547C13.8746 5.94145 13.7473 5.55318 13.6113 5.19531C13.2838 4.33319 12.9263 3.67613 12.5908 3.25C12.2251 2.78555 12.0128 2.75003 12 2.75C11.9874 2.75 11.775 2.78539 11.4092 3.25C11.0737 3.67613 10.7162 4.33319 10.3887 5.19531C10.095 5.96833 9.83479 6.88118 9.6377 7.89551C10.394 7.80195 11.1856 7.75 12 7.75C14.5787 7.75 16.9285 8.26729 18.6553 8.99609C19.5158 9.35936 20.2517 9.78833 20.7861 10.2559C21.2945 10.7006 21.75 11.2964 21.75 12C21.75 12.7036 21.2945 13.2994 20.7861 13.7441C20.2517 14.2117 19.5159 14.6406 18.6553 15.0039C17.8704 15.3352 16.9565 15.6218 15.9512 15.8369C15.7431 17.1478 15.4384 18.3337 15.0693 19.3311C14.7184 20.2794 14.2981 21.092 13.8252 21.6826C13.3726 22.2479 12.7561 22.75 12 22.75C11.2439 22.75 10.6274 22.2479 10.1748 21.6826C9.7019 21.092 9.28158 20.2794 8.93066 19.3311C8.56135 18.3329 8.25598 17.1461 8.04785 15.834C7.04304 15.6192 6.12924 15.335 5.34473 15.0039C4.48415 14.6406 3.74835 14.2117 3.21387 13.7441C2.70552 13.2994 2.25 12.7036 2.25 12C2.25002 11.2964 2.70552 10.7006 3.21387 10.2559C3.74835 9.78833 4.48415 9.35936 5.34473 8.99609C6.1345 8.66275 7.05464 8.37379 8.06738 8.1582C8.28751 6.84517 8.60771 5.65872 8.98633 4.66211C9.34618 3.715 9.77017 2.90811 10.2314 2.32227C10.6625 1.77483 11.2626 1.25 12 1.25ZM12 9.25C11.0914 9.25 10.2176 9.31955 9.39941 9.44141C9.30426 10.2545 9.25 11.1125 9.25 12C9.25 12.8869 9.2997 13.7438 9.38867 14.5557L9.38965 14.5566C9.44872 15.0873 9.52616 15.6035 9.62012 16.1016C9.61783 16.1013 9.61556 16.1009 9.61328 16.1006C9.80063 17.1198 10.0503 18.036 10.3369 18.8105C10.6556 19.6718 11.0083 20.3237 11.3457 20.7451C11.7034 21.1918 11.9345 21.25 12 21.25C12.0655 21.25 12.2966 21.1918 12.6543 20.7451C12.9917 20.3237 13.3444 19.6718 13.6631 18.8105C13.9496 18.0361 14.1974 17.1196 14.3848 16.1006C13.6216 16.1959 12.8225 16.25 12 16.25C11.7221 16.25 11.4469 16.2421 11.1748 16.2305C11.0719 15.7479 10.9871 15.2412 10.9199 14.7148C11.2734 14.7363 11.6338 14.75 12 14.75C12.9123 14.75 13.7893 14.6794 14.6104 14.5566C14.6994 13.7445 14.75 12.8873 14.75 12C14.75 11.1124 14.695 10.2545 14.5996 9.44141C13.7817 9.31964 12.9083 9.25 12 9.25ZM16.1387 9.74609C16.2091 10.4729 16.25 11.2269 16.25 12C16.25 12.772 16.213 13.5255 16.1475 14.252C16.8605 14.0742 17.5085 13.8591 18.0723 13.6211C18.8401 13.297 19.4225 12.9445 19.7988 12.6152C20.2013 12.2631 20.25 12.0463 20.25 12C20.25 11.9536 20.2012 11.7368 19.7988 11.3848C19.4225 11.0555 18.8401 10.703 18.0723 10.3789C17.5062 10.14 16.8551 9.92422 16.1387 9.74609ZM7.8584 9.74609C7.14304 9.92409 6.49309 10.1403 5.92773 10.3789C5.15989 10.703 4.5775 11.0555 4.20117 11.3848C3.79882 11.7368 3.75003 11.9536 3.75 12C3.75 12.0463 3.7987 12.2631 4.20117 12.6152C4.57749 12.9445 5.15988 13.297 5.92773 13.6211C6.49092 13.8588 7.13847 14.0725 7.85059 14.25C7.78521 13.5242 7.75 12.7713 7.75 12C7.75 11.227 7.78865 10.4729 7.8584 9.74609Z" fill="currentColor"/>
+      </symbol>
+    </svg>
+
+    <div class="app">
+      <div class="container" aria-live="polite">
+        <header class="header-group">
+          <h1 class="page-title">Follow the instructions on the card</h1>
+          <p class="page-subtitle">Read the text on the card</p>
+        </header>
+
+        <section class="screens">
+          <div class="screen is-active" data-screen="default">
+            <div class="card card-stack">
+              <div class="card-content">
+                <h2 class="card-h">Press on the Primary button</h2>
+                <p class="card-p">Follow the instructions to continue</p>
+              </div>
+              <div class="btn-row">
+                <button class="btn btn-primary" data-action="to-success" type="button">Primary button</button>
+                <button class="btn btn-secondary" data-action="to-error" type="button">Secondary button</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen" data-screen="success">
+            <div class="card card-stack">
+              <div class="card-content">
+                <h2 class="card-h success">Done!</h2>
+                <p class="card-p success">Great job!</p>
+              </div>
+            </div>
+            <button class="btn btn-surface-danger" data-action="to-default" type="button">
+              <span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>
+              Back
+            </button>
+          </div>
+
+          <div class="screen" data-screen="error">
+            <div class="card">
+              <div class="card-row">
+                <div class="card-content">
+                  <h2 class="card-h error">Failed</h2>
+                  <p class="card-p error">Press on the Primary button</p>
+                </div>
+                <div class="circle-group" aria-label="Actions">
+                  <button class="circle-btn primary" data-action="to-success" type="button" aria-label="Home">
+                    <span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>
+                  </button>
+                  <button class="circle-btn secondary" data-action="shake-error" type="button" aria-label="360">
+                    <span class="icon" aria-hidden="true"><svg><use href="#icon-360"/></svg></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="fixed-bar">
+      <button class="btn btn-secondary" data-action="nav" data-hash="" type="button">Home</button>
+      <button class="btn btn-secondary" data-action="nav" data-hash="uikit" type="button">UI Kit</button>
+      <button class="btn btn-secondary" data-action="nav" data-hash="map" type="button">Map</button>
+      <div class="theme-group" role="radiogroup" aria-label="Theme">
+        <button class="theme-radio" data-action="set-theme" data-theme-value="" type="button" role="radio" aria-checked="true">
+          <span class="select-icon select-icon--radio" style="border-width:4px"></span>
+          Light
+        </button>
+        <button class="theme-radio" data-action="set-theme" data-theme-value="dark" type="button" role="radio" aria-checked="false">
+          <span class="select-icon select-icon--radio"></span>
+          Dark
+        </button>
+        <button class="theme-radio" data-action="set-theme" data-theme-value="dark-ai" type="button" role="radio" aria-checked="false">
+          <span class="select-icon select-icon--radio"></span>
+          Dark AI
+        </button>
+      </div>
+    </div>
+
+    <div class="uikit-overlay" id="uikit">
+      <div class="uikit-inner">
+
+        <header class="header-group">
+          <h1 class="page-title">UI Kit</h1>
+          <p class="page-subtitle">Design tokens and components</p>
+        </header>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Color Primitives</h2></div>
+          <p class="caption">Chartreuse</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:#E5DF00"></div><span class="swatch-name">Base</span><span class="swatch-hex">#E5DF00</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#BDB800"></div><span class="swatch-name">Dark</span><span class="swatch-hex">#BDB800</span></div>
+          </div>
+          <p class="caption">Eucalyptus</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:#C0BC90"></div><span class="swatch-name">Base</span><span class="swatch-hex">#C0BC90</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#E6E4D2"></div><span class="swatch-name">Light</span><span class="swatch-hex">#E6E4D2</span></div>
+          </div>
+          <p class="caption">Neutral</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:#1A1905"></div><span class="swatch-name">Ash</span><span class="swatch-hex">#1A1905</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#2D2B1F"></div><span class="swatch-name">Dark</span><span class="swatch-hex">#2D2B1F</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#87867F"></div><span class="swatch-name">Charcoal</span><span class="swatch-hex">#87867F</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#F4F3EA"></div><span class="swatch-name">Gray</span><span class="swatch-hex">#F4F3EA</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#FFFFFF"></div><span class="swatch-name">White</span><span class="swatch-hex">#FFFFFF</span></div>
+          </div>
+          <p class="caption">Green</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:#64B56E"></div><span class="swatch-name">Base</span><span class="swatch-hex">#64B56E</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#243805"></div><span class="swatch-name">Dark</span><span class="swatch-hex">#243805</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#EBFAC1"></div><span class="swatch-name">Light</span><span class="swatch-hex">#EBFAC1</span></div>
+          </div>
+          <p class="caption">Red</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:#E92F2F"></div><span class="swatch-name">Base</span><span class="swatch-hex">#E92F2F</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#4A1404"></div><span class="swatch-name">Dark</span><span class="swatch-hex">#4A1404</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#FFD6BD"></div><span class="swatch-name">Light</span><span class="swatch-hex">#FFD6BD</span></div>
+          </div>
+          <p class="caption">Opacity</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-circle" style="background:rgba(0,0,0,0.4)"></div><span class="swatch-name">Black 40%</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:rgba(135,134,127,0.5)"></div><span class="swatch-name">Charcoal 50%</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:rgba(255,255,255,0.3)"></div><span class="swatch-name">White 30%</span></div>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content">
+            <h2 class="card-h">Colors Content</h2>
+            <p class="card-p">Semantic text and icon colors</p>
+          </div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-default)"></div><span class="swatch-name">Default</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-primary)"></div><span class="swatch-name">Primary</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-secondary)"></div><span class="swatch-name">Secondary</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-light)"></div><span class="swatch-name">Light</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-white)"></div><span class="swatch-name">White</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-success)"></div><span class="swatch-name">Success</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--content-error)"></div><span class="swatch-name">Error</span></div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content">
+            <h2 class="card-h">Colors BG</h2>
+            <p class="card-p">Semantic background colors</p>
+          </div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-default)"></div><span class="swatch-name">Default</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-primary)"></div><span class="swatch-name">Primary</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-secondary)"></div><span class="swatch-name">Secondary</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-light)"></div><span class="swatch-name">Light</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-dark)"></div><span class="swatch-name">Dark</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-success)"></div><span class="swatch-name">Success</span></div>
+          <div class="semantic-row"><div class="semantic-dot" style="background:var(--bg-error)"></div><span class="swatch-name">Error</span></div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Typography</h2></div>
+          <div class="card-content">
+            <p class="caption">Header — 24/28, 500, ls -0.432px</p>
+            <p class="card-h">The quick brown fox jumps</p>
+          </div>
+          <div class="card-content">
+            <p class="caption">Title — 16/20, 500, ls -0.256px</p>
+            <p class="type-title">The quick brown fox jumps over the lazy dog</p>
+          </div>
+          <div class="card-content">
+            <p class="caption">Body — 16/20, 400, ls -0.08px</p>
+            <p class="card-p">The quick brown fox jumps over the lazy dog</p>
+          </div>
+          <div class="card-content">
+            <p class="caption">Caption — 12/14, 500, ls 0.144px</p>
+            <p class="type-caption">The quick brown fox jumps over the lazy dog</p>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Icons</h2></div>
+          <div class="circle-group">
+            <div class="card-content" style="align-items:center">
+              <span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>
+              <p class="caption">house</p>
+            </div>
+            <div class="card-content" style="align-items:center">
+              <span class="icon" aria-hidden="true"><svg><use href="#icon-360"/></svg></span>
+              <p class="caption">360</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Buttons</h2></div>
+          <p class="caption">Primary</p>
+          <button class="btn btn-primary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>Primary</button>
+          <p class="caption">Secondary</p>
+          <button class="btn btn-secondary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>Secondary</button>
+          <p class="caption">Destructive (surface)</p>
+          <button class="btn btn-surface-danger" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>Back</button>
+          <p class="caption">Icon buttons</p>
+          <div class="circle-group">
+            <button class="circle-btn primary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span></button>
+            <button class="circle-btn secondary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-360"/></svg></span></button>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Select</h2></div>
+          <p class="caption">Radio</p>
+          <div class="component-row">
+            <div class="select"><span class="select-icon select-icon--radio"></span>Default</div>
+            <div class="select is-selected"><span class="select-icon select-icon--radio"></span>Selected</div>
+          </div>
+          <p class="caption">Checkbox</p>
+          <div class="component-row">
+            <div class="select"><span class="select-icon select-icon--checkbox"></span>Default</div>
+            <div class="select is-selected"><span class="select-icon select-icon--checkbox"></span>Selected</div>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Cards</h2></div>
+          <p class="caption">With stacked buttons</p>
+        </div>
+        <div class="card card-stack">
+          <div class="card-content">
+            <h2 class="card-h">Estimate request</h2>
+            <p class="card-p">Standard fees apply for all estimates regardless of whether the job is awarded</p>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>Primary</button>
+            <button class="btn btn-secondary" type="button"><span class="icon" aria-hidden="true"><svg><use href="#icon-house"/></svg></span>Secondary</button>
+          </div>
+        </div>
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Cards</h2></div>
+          <p class="caption">With icon buttons</p>
+        </div>
+        <div class="card">
+          <div class="card-row">
+            <div class="card-content">
+              <h2 class="card-h">Estimate request</h2>
+              <p class="card-p">Standard fees apply for all estimates regardless of whether the job is awarded</p>
+            </div>
+            <div class="circle-group">
+              <button class="circle-btn primary" type="button"><span class="icon"><svg><use href="#icon-house"/></svg></span></button>
+              <button class="circle-btn secondary" type="button"><span class="icon"><svg><use href="#icon-360"/></svg></span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content"><h2 class="card-h">Spacing</h2></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">XXS — 4</p><div class="spacing-bar" style="width:4px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">XS — 8</p><div class="spacing-bar" style="width:8px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">S — 16</p><div class="spacing-bar" style="width:16px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">MS — 24</p><div class="spacing-bar" style="width:24px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">M — 32</p><div class="spacing-bar" style="width:32px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">ML — 44</p><div class="spacing-bar" style="width:44px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">L — 48</p><div class="spacing-bar" style="width:48px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">XL — 64</p><div class="spacing-bar" style="width:64px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">XXL — 72</p><div class="spacing-bar" style="width:72px"></div></div>
+          <div class="spacing-row"><p class="caption" style="min-width:80px">XXL 2 — 96</p><div class="spacing-bar" style="width:96px"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="map-overlay" id="map">
+      <div class="map-inner">
+
+        <header class="header-group">
+          <h1 class="page-title">Screen Map</h1>
+          <p class="page-subtitle">Click a screen to navigate</p>
+        </header>
+
+        <div class="map-grid">
+          <button class="map-preview" data-action="map-to" data-map-to="default" type="button">
+            <div class="map-frame">
+              <div class="map-frame-content">
+                <div class="card card-stack">
+                  <div class="card-content">
+                    <h2 class="card-h">Press on the Primary button</h2>
+                    <p class="card-p">Follow the instructions to continue</p>
+                  </div>
+                  <div class="btn-row">
+                    <div class="btn btn-primary">Primary button</div>
+                    <div class="btn btn-secondary">Secondary button</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="map-label">Default</span>
+          </button>
+
+          <button class="map-preview" data-action="map-to" data-map-to="success" type="button">
+            <div class="map-frame">
+              <div class="map-frame-content">
+                <div class="card card-stack">
+                  <div class="card-content">
+                    <h2 class="card-h success">Done!</h2>
+                    <p class="card-p success">Great job!</p>
+                  </div>
+                </div>
+                <div class="btn btn-surface-danger">Back</div>
+              </div>
+            </div>
+            <span class="map-label">Success</span>
+          </button>
+
+          <button class="map-preview" data-action="map-to" data-map-to="error" type="button">
+            <div class="map-frame">
+              <div class="map-frame-content">
+                <div class="card">
+                  <div class="card-row">
+                    <div class="card-content">
+                      <h2 class="card-h error">Failed</h2>
+                      <p class="card-p error">Press on the Primary button</p>
+                    </div>
+                    <div class="circle-group">
+                      <div class="circle-btn primary"><span class="icon"><svg><use href="#icon-house"/></svg></span></div>
+                      <div class="circle-btn secondary"><span class="icon"><svg><use href="#icon-360"/></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="map-label">Error</span>
+          </button>
+        </div>
+
+        <div class="card card-stack">
+          <div class="card-content">
+            <h2 class="card-h">Scaling to production</h2>
+            <p class="card-p">These are live miniatures rendered with CSS scale. Works for a handful of screens, but for 50+ this approach gets heavy — each clone is a full DOM subtree.</p>
+            <p class="card-p">For real projects: Playwright runs headless Chrome after each deploy, calls page.screenshot() on every route, outputs PNGs. A CI pipeline commits thumbnails to /previews. This page then loads lightweight images instead of live DOM clones — handles 100+ screens easily with lazy loading.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
